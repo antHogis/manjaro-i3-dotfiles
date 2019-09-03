@@ -1,0 +1,13 @@
+[user]
+	name = Anton Höglund
+	email = antonjhoglund@hotmail.com
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	cat = show
+	cp = cherry-pick
+	lg = log --pretty=oneline
+	ci = commit
