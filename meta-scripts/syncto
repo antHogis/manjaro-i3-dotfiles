@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cp -r `ls -A | sed '/^\.git$/d;/^README\.md$/d;/^meta-scripts$/d'` ~/
+
