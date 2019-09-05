@@ -6,6 +6,8 @@ My dotfiles and customation automation tools for the Manjaro i3 community distri
 - zsh
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 - chromium
-- ttf-font-icons
-
+- ttf-font-icons (AUR)
+- [xkb-switch](https://github.com/ierton/xkb-switch)
+- i3blocks
+- vim (with X support, e.g. gvim)
 
