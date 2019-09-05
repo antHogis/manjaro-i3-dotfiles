@@ -1,0 +1,2 @@
+xrandr --output DP-0 --primary
+xrandr --output DP-2 --rotate left --rate 144.0 --right-of DP-0
