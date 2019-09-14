@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
 
+# TODO Fix so the script will fail when run from another git repository
+
+dir_check="$(git rev-parse --show-cdup 2> /dev/null)" 
+
+if [ "$?" -ne 0 ] || [ "$dir_check" != "" ]; then
+  >&2 echo "Please run this program from the root of the repository"
+  exit 1
+fi
+
+
 cp -r `ls -A | sed '/^\.git$/d;/^README\.md$/d;/^meta-scripts$/d'` ~/
 
