@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# TODO Suppress error output
+
+REPO_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." >/dev/null 2>&1 && pwd )"
+DIFF_LINES=($(diff -srq "$REPO_ROOT" ~/ | grep 'differ$' | cut -d ' ' -f 2 | sed "s|${REPO_ROOT}/||" ))
+LEN_LINES="${#DIFF_LINES[@]}"
+
+if [ "$LEN_LINES" -eq 0 ]; then
+  echo "No differences."
+  exit 0
+fi
+
+echo -e "The following files differ. Input index to view diff: \n"
+
+for (( i=0; i<"$LEN_LINES"; i++ ))
+do
+  echo "$i. ${DIFF_LINES[$i]}"
+done
+
+input_quit=0
+
+while [ $input_quit -eq 0 ]; do
+  read -s index
+  if [ "$index" == "q" ]; then
+    input_quit=1
+  elif [ "$index" -gt "$LEN_LINES" ]; then
+    echo "Invalid index \"$index\"!" 
+  else
+    chosen="${DIFF_LINES[$index]}"
+    diff "$REPO_ROOT/$chosen" "$HOME/$chosen" | less
+  fi
+done
+
