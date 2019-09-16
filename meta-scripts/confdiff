@@ -19,13 +19,16 @@ do
 done
 
 input_quit=0
+numeric_re='^[0-9]+$'
 
 while [ $input_quit -eq 0 ]; do
   read -s index
   if [ "$index" == "q" ]; then
     input_quit=1
+  elif ! [[ $index =~ $numeric_re ]]; then
+    >&2 echo "Please input numeric value, or q to quit."
   elif [ "$index" -gt "$LEN_LINES" ]; then
-    echo "Invalid index \"$index\"!" 
+    >&2 echo "Invalid index \"$index\"!" 
   else
     chosen="${DIFF_LINES[$index]}"
     diff "$REPO_ROOT/$chosen" "$HOME/$chosen" | less
