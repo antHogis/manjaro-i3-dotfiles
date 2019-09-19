@@ -22,7 +22,7 @@ input_quit=0
 NUMERIC_RE='^[0-9]+$'
 
 while [ $input_quit -eq 0 ]; do
-  read -s index
+  read -sn1 index
   if [ "$index" == "q" ]; then
     input_quit=1
   elif ! [[ $index =~ $NUMERIC_RE ]]; then
