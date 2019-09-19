@@ -106,6 +106,7 @@ source $ZSH/oh-my-zsh.sh
 alias l="ls -CF"
 alias ll="ls -FAlh"
 alias la="ls -AF"
+alias duls="du -sh ./*"
 
 # Path
 HOMEBIN="/home/hogis/bin/"
