@@ -11,3 +11,5 @@
 	cp = cherry-pick
 	lg = log --pretty=oneline
 	ci = commit
+[credential]
+	helper = cache --timeout=3600
