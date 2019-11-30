@@ -107,6 +107,7 @@ alias l="ls -CF"
 alias ll="ls -FAlh"
 alias la="ls -AF"
 alias duls="du -sh ./*"
+alias git="noglob git"
 
 # Path
 HOMEBIN="/home/hogis/bin/"
