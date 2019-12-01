@@ -223,7 +223,8 @@ for_window [class="Xfburn"] floating enable
 
 
 # Open specific applications with non-tiling layout
-for_window [title="Chromium*"] layout tabbed
+# (?i) => case insensitive
+for_window [class="(?i)brave-browser"] layout tabbed
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
