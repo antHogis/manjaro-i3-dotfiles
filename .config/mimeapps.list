@@ -5,3 +5,4 @@ image/jpeg=viewnior.desktop;
 [Default Applications]
 image/png=viewnior.desktop
 image/jpeg=viewnior.desktop
+x-scheme-handler/webcal=brave-browser.desktop
