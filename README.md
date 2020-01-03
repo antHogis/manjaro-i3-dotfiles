@@ -10,4 +10,4 @@ My dotfiles and customation automation tools for the Manjaro i3 community distri
 - [xkb-switch](https://github.com/ierton/xkb-switch)
 - i3blocks
 - vim (with X support, e.g. gvim)
-
+- [Vundle](https://github.com/VundleVim/Vundle.vim)
