@@ -111,7 +111,7 @@ alias git="noglob git"
 
 # Path
 HOMEBIN="/home/hogis/bin/"
-export PATH=$PATH:${HOMEBIN}bash:${HOMEBIN}zsh:${HOMEBIN}js:${HOMEBIN}py
+export PATH=$PATH:${HOMEBIN}bash:${HOMEBIN}zsh:${HOMEBIN}js:${HOMEBIN}py:${HOMEBIN}sh:
 export PATH=$PATH:/opt/pycharm-2019.2.1/bin
 
 # Miniscripts
